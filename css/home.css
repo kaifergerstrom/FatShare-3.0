@@ -61,3 +61,8 @@
 	background-color: #072949;
 	color: white;
 }
+.profile-no-posts {
+	text-align: center;
+	margin-top: 100px;
+	color: #696969;
+}

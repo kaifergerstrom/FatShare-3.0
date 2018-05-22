@@ -7,6 +7,7 @@ date_default_timezone_set('EST');
 $user = new User();
 
 session_start();
+error_reporting(0);
 
 if(isset($_SESSION['user_id'])) {
 	$user_id = $_SESSION['user_id'];
