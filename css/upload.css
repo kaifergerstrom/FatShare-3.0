@@ -1,0 +1,80 @@
+.upload-form-container {
+	width: 550px;
+	background-color: white;
+	border-radius: 5px;
+    margin-bottom: 20px;
+}
+.home-container {
+	width: 550px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.upload-form-textarea {
+	resize: none;
+	width: 425px;
+	height: 125px;
+    padding: 15px;
+    padding-left: 10px;
+    border: 0;
+    font-size: 20px;
+}
+.upload-option-block {
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	padding-top: 25px;
+}
+.profile-img-upload-form {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 75px;
+    margin-right: 10px;
+}
+.upload-form-file-block {
+    margin-top: 15px;
+    padding-bottom: 40px;
+    height: 20px;
+}
+.inputfile {
+    width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.choose-file-btn {
+    background-color: #FF4500;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px 15px;
+    float: left;
+}
+.post-upload-btn {
+    background-color: #4A7EA5;
+    float: right;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px 15px;
+}
+.post-preview-img {
+    width: 500px;
+    margin-bottom: 25px;
+    max-height: 300px;
+    display: none;
+}
+.remove-image-post {
+    background-color: #FF4500;
+    color: white;
+    border-radius: 8px;
+    border: 0;
+    padding: 10px 15px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 2px;
+    display: none;
+    height: 38px;
+}

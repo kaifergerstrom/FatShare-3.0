@@ -1,0 +1,38 @@
+body {
+	font-family: 'Proxima Nova', Georgia, sans-serif;
+	margin: 0px;
+	background-color: #EEEEEE;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-family: 'Proxima Nova', Georgia, sans-serif;
+}
+*:focus {
+    outline: none;
+    color: #515151;
+}
+img {
+	object-fit: cover;
+}
+a {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a:focus {
+	color:inherit;
+}
+form, table {
+    display:inline;
+    margin:0px;
+    padding:0px;
+}

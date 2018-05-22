@@ -1,0 +1,73 @@
+.join-form-container {
+	width: 350px;
+	float: left;
+}
+.join-small-input {
+	text-indent: 10px;
+	font-size: 15px;
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+	border: 0;
+}
+.join-big-input {
+	text-indent: 10px;
+	font-size: 15px;
+	height: 40px;
+	width: 300px;
+	margin-top: 15px;
+	border-radius: 5px;
+	border: 0;
+}
+.login-input {
+	text-indent: 10px;
+	font-size: 15px;
+	height: 40px;
+	width: 300px;
+	margin-top: 15px;
+	border-radius: 5px;
+	border: 0;
+}
+.login-container {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.login-form {
+	width: 300px;
+	float: left;
+}
+.login-msg {
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+.join-form-msg {
+	float: left;
+	width: 300px;
+	height: 200px;
+}
+.join-form-title {
+	color: white;
+	font-size: 30px;
+}
+.join-form-msg li {
+	color: white;
+	margin-top: 10px;
+	font-size: 18px;
+}
+.join-big-button {
+	font-size: 15px;
+	height: 40px;
+	width: 300px;
+	margin-top: 15px;
+	border-radius: 5px;
+	border: 0;
+	background-color: #545A6A;
+	color: white;
+}
+.join-error {
+	color: red;
+	margin-bottom: 15px;
+}
