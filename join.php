@@ -3,6 +3,8 @@ include('./scripts/initialize.php');
 include('./includes/header.php');
 
 $error = '';
+$verify_token = $_GET['token'];
+echo $verify_token;
 
 if (isset($_POST['submit-join'])) {
 
@@ -21,8 +23,8 @@ if (isset($_POST['submit-join'])) {
 						if ($password == $password_confirm) {
 							$date = date("Y-m-d h:i:sa");
 							$default_img = 'default.png';
-							DB::query('INSERT INTO users VALUES (\'\', :user_id, :password, :firstname, :lastname, :email, :default_img, \'\', \'\', \'\', :dated)', array(':user_id'=>$user_id, ':password'=>md5($password), ':firstname'=>$firstname, ':lastname'=>$lastname, ':email'=>$email, ':default_img'=>$default_img, ':dated'=>$date));
-
+							DB::query('INSERT INTO users VALUES (\'\', :user_id, :password, :firstname, :lastname, :email, :default_img, \'\', \'\', \'\', \'\', :dated)', array(':user_id'=>$user_id, ':password'=>md5($password), ':firstname'=>$firstname, ':lastname'=>$lastname, ':email'=>$email, ':default_img'=>$default_img, ':dated'=>$date));
+								
 								$user_id = substr($user_id, 0, 8); 
 	  							$_SESSION['user_id'] = $user_id;
 	  							DB::header("home.php");
