@@ -14,7 +14,7 @@ if (isset($_POST['submit_upload'])) {
 
 	$file_name = basename($_FILES["fileToUpload"]["name"]);
 	$file_type_upload = $_FILES["fileToUpload"]["type"];
-
+	
 	$desc = strip_tags($_POST['post_desc']);
 
 	if(empty($_FILES['fileToUpload']['name'])) {
@@ -89,3 +89,19 @@ function InsertIntoDatabase($file_name, $file_type, $desc) {
 }
 
 ?>
+
+<form method="post" name='upload_form' enctype="multipart/form-data">
+    <div class='upload-form-container'>
+        <div class='upload-option-block'>
+            <img class='profile-img-upload-form' src='assets/profile_img/<?php echo $user::$profile_img;?>'>
+            <textarea name='post_desc' class='upload-form-textarea' placeholder="What's new?"></textarea>
+            <div class='upload-form-file-block'>
+                <input type="file" class='inputfile' name="fileToUpload" id="fileToUpload">
+                <label for="fileToUpload" id='inputfilelabel' class='choose-file-btn'>Attach a file</label>
+                <button type='button' class='remove-image-post' id='remove-img-post'><i class="fas fa-times"></i></button>
+                <button type="submit" name="submit_upload" class='post-upload-btn'>Post</button>
+            </div>
+            <img id="blah" class='post-preview-img' src="#" alt="your image" />
+        </div>
+    </div>
+</form>

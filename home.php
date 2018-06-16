@@ -4,7 +4,6 @@ include('./includes/home_header.php');
 include_once('./classes/Post.php');
 include_once('./classes/Upload.php');
 
-//Post::upload_post(, $file_input_name, $desc);
 //echo $error;
 
 ?>
@@ -16,7 +15,7 @@ include_once('./classes/Upload.php');
 <div class='home-container'>
 <?php
     $post_home = new Post();
-	Upload::CreateUploadForm();
+	include('includes/upload_form.php');
     $post_home::display_posts($user_id, True);
 ?>
 </div>

@@ -17,10 +17,13 @@ error_reporting(1);
 */
 
 
-$allowed_files = array('login.php', 'index.php', 'join.php', '404.php');
+$allowed_files = array('login.php', 'index.php', 'join.php');
 $current_script = basename($_SERVER["SCRIPT_FILENAME"]);
 
 if(isset($_SESSION['user_id'])) {
+	if (in_array($current_script, $allowed_files)) {
+		header('LOCATION: home.php');
+	}
 	$user_id = $_SESSION['user_id'];
 } else {
 	$user_id = "";

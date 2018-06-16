@@ -1,5 +1,6 @@
 <?php
 include('./includes/header.php');
+include('./scripts/initialize.php');
 ?>
 
 <link rel="stylesheet" type="text/css" href="./css/all.css">
