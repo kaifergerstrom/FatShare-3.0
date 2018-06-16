@@ -4,8 +4,9 @@
 
 <?php
 include('./includes/header.php');
+include('./scripts/initialize.php');
 
-if (isset($_SESSION['user_id'])) {
+if (!empty($user_id)) {
 	$redirect = 'home.php';
 } else {
 	$redirect = 'index.php';

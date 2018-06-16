@@ -9,7 +9,15 @@ $user = new User();
 session_start();
 error_reporting(1);
 
-$allowed_files = array('login.php', 'index.php', 'join.php');
+/*
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(1);
+*/
+
+
+$allowed_files = array('login.php', 'index.php', 'join.php', '404.php');
 $current_script = basename($_SERVER["SCRIPT_FILENAME"]);
 
 if(isset($_SESSION['user_id'])) {
