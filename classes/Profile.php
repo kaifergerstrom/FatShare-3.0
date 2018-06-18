@@ -61,7 +61,7 @@ class Profile {
         			?>
 	        			<td>
 	        				<a href="profile.php?u=<?php echo $friend;?>">
-	        				<img  class='profile-friend-img' src="assets/profile_img/<?php echo $friend_info::$profile_img;?>">
+	        				<img  class='profile-friend-img' src=" <?php echo $friend_info::$profile_img;?>">
 	        				</a>
 	        			</td>
         			<?php

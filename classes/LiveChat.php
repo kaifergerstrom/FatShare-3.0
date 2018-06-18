@@ -46,7 +46,7 @@ class LiveChat {
 		        			$friend_info::init($friend);
 
 		        			?>
-		        				<img class="live-chat-option-img" src="assets/profile_img/<?php echo $friend_info::$profile_img;?>">
+		        				<img class="live-chat-option-img" src=" <?php echo $friend_info::$profile_img;?>">
 		        				<div class='live-chat-name-title'><?php echo self::get_users_in_chat($chat_id_array, True);?></div>
 		        			<?php
 						}
@@ -151,7 +151,7 @@ class LiveChat {
 
 			     ?>
 			    <div class='chat-comment-container' id='chat-comment'>
-			    	<img class='live-chat-msg-pic<?php echo $other_user_css;?>' src='assets/profile_img/<?php echo $poster_info::$profile_img;?>'>
+			    	<img class='live-chat-msg-pic<?php echo $other_user_css;?>' src=' <?php echo $poster_info::$profile_img;?>'>
 			    	<div class='chat-comment <?php echo $other_user_css;?>'>
 			    		<?php echo htmlspecialchars($msg);?>
 				    </div>
@@ -205,7 +205,7 @@ class LiveChat {
         			$friend_info::init($friend);
 
         			?>
-        				<img class="live-chat-option-img" src="assets/profile_img/<?php echo $friend_info::$profile_img;?>">
+        				<img class="live-chat-option-img" src=" <?php echo $friend_info::$profile_img;?>">
         				<div class='live-chat-name-title'><?php echo $friend_info::$firstname;?></div>
         				<input type='checkbox' class='check-box-add-chat' name="add-users[]" value='<?php echo $friend_info::$profile_id;?>'>
 			

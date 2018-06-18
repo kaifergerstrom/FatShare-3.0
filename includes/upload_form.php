@@ -93,7 +93,7 @@ function InsertIntoDatabase($file_name, $file_type, $desc) {
 <form method="post" name='upload_form' enctype="multipart/form-data">
     <div class='upload-form-container'>
         <div class='upload-option-block'>
-            <img class='profile-img-upload-form' src='assets/profile_img/<?php echo $user::$profile_img;?>'>
+            <img class='profile-img-upload-form' src='<?php echo $user::$profile_img;?>'>
             <textarea name='post_desc' class='upload-form-textarea' placeholder="What's new?"></textarea>
             <div class='upload-form-file-block'>
                 <input type="file" class='inputfile' name="fileToUpload" id="fileToUpload">

@@ -29,7 +29,7 @@ if (isset($_POST['banner-follow-user'])) {
 
 <div class="profile-banner-container" style="background-image: url(assets/banners/forest.jpg)">
 	<div class="banner-user-info">
-		<img src="assets/profile_img/<?php echo $profile::$profile_img;?>" class="banner-profile-img">
+		<img src=" <?php echo $profile::$profile_img;?>" class="banner-profile-img">
 		<div class="banner-full-name"><?php echo $profile::$full_name;?></div>
 		<div class="banner-description"><?php echo $profile::$description;?></div>
 	</div>

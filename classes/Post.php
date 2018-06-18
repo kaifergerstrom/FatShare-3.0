@@ -75,7 +75,7 @@ class Post {
 			<div class="post-container">
 				<div class="post-header-info">
 					<div class="post-header-block">
-						<img class="post-profile-img" src="assets/profile_img/<?php echo $post_profile::$profile_img;?>">
+						<img class="post-profile-img" src=" <?php echo $post_profile::$profile_img;?>">
 						<div class='post-header-name'><?php echo $post_profile::$full_name;?> <?php echo $post_addon;?><br><span class='post-header-date'><?php echo $month_string; ?></span></div>
 					</div>
 				</div>
@@ -115,7 +115,7 @@ class Post {
 							?>
 							<div class='comment-container'>
 								<div class='comment-block'>
-									<img class='post-comment-img' src="assets/profile_img/<?php echo $comment_profile::$profile_img?>">
+									<img class='post-comment-img' src=" <?php echo $comment_profile::$profile_img?>">
 									<div class='post-comment'><div class='post-comment-name'><?php echo $comment_profile::$full_name;?></div><?php echo $comment;?></div>
 								</div>
 							</div>
@@ -124,7 +124,7 @@ class Post {
 						?>
 
 						<div class='post-sub-comment-bar'>
-							<img class="comment-input-picture" src="assets/profile_img/<?php echo $user::$profile_img;?>"><input type='text' class='comment-search-bar' placeholder="Write a comment..">
+							<img class="comment-input-picture" src="<?php echo $user::$profile_img;?>"><input type='text' class='comment-search-bar' placeholder="Write a comment..">
 						</div>
 					</div>
 				</div>

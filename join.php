@@ -1,10 +1,11 @@
 <?php
 include('./scripts/initialize.php');
 include('./includes/header.php');
+include_once('./classes/Verify.php');
 
 $error = '';
-$verify_token = $_GET['token'];
-echo $verify_token;
+$success = '';
+$verify = new Verify();
 
 if (isset($_POST['submit-join'])) {
 
@@ -22,13 +23,13 @@ if (isset($_POST['submit-join'])) {
 					if (strlen($password) > 6) {
 						if ($password == $password_confirm) {
 							$date = date("Y-m-d h:i:sa");
-							$default_img = 'default.png';
+							$default_img = 'https://i.imgur.com/bGYeO8d.png';
 							DB::query('INSERT INTO users VALUES (\'\', :user_id, :password, :firstname, :lastname, :email, :default_img, \'\', \'\', \'\', \'\', :dated)', array(':user_id'=>$user_id, ':password'=>md5($password), ':firstname'=>$firstname, ':lastname'=>$lastname, ':email'=>$email, ':default_img'=>$default_img, ':dated'=>$date));
-								
-								$user_id = substr($user_id, 0, 8); 
-	  							$_SESSION['user_id'] = $user_id;
-	  							DB::header("home.php");
-
+								$user_id = substr($user_id, 0, 8);
+								$success = "Please check your email to activate your account";
+								$verify::send_verify_email($email, $user_id);
+								//$_SESSION['user_id'] = $user_id;
+	  							//DB::header("home.php");
 						} else {
 							$error = "Passwords do not match";
 						}
@@ -62,6 +63,7 @@ if (isset($_POST['submit-join'])) {
 		<div class="welcome-container">
 			<form method="POST">
 				<div class="join-error"><?php echo $error;?></div>
+				<div class="join-success"><?php echo $success;?></div>
 				<div class="join-form-container">
 					<input type='text' name='firstname' placeholder="Firstname" class='join-small-input'>
 					<input type='text' name='lastname' placeholder="Lastname" class='join-small-input'>

@@ -36,7 +36,7 @@
 		</nav>
 		<a href="profile.php?u=<?php echo $user_id;?>">
 			<div class="header-profile-name">
-				<img src="assets/profile_img/<?php echo $user::$profile_img;?>" class="profile-img-header">
+				<img src="<?php echo $user::$profile_img;?>" class="profile-img-header">
 				<div class="full-name-header"><?php echo $user::$full_name;?></div>
 			</div>
 		</a>
