@@ -14,7 +14,6 @@ ini_set('log_errors', 1);
 error_reporting(1);
 
 
-
 $allowed_files = array('login.php', 'index.php', 'join.php');
 $current_script = basename($_SERVER["SCRIPT_FILENAME"]);
 

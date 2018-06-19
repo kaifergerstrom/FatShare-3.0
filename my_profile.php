@@ -32,7 +32,7 @@ if (isset($_POST['update-profile'])) {
 			$response = json_decode($response);
 			$profile_img = $response->data->link;
 	} else {
-		$profile_img = 'default.png';
+		$profile_img = $user::$profile_img;
 	}
 
 	DB::query('UPDATE users SET firstname=:firstname, lastname=:lastname, profile_img=:profile_img, locked=:privacy, description=:profile_desc WHERE user_id=:user_id', array(':firstname'=>$first_name, ':lastname'=>$last_name, ':profile_img'=>$profile_img, ':privacy'=>$locked, ':profile_desc'=>$desc, ':user_id'=>$user::$user_id));
@@ -54,8 +54,10 @@ if (isset($_POST['update-profile'])) {
 	<div class='settings-container'>
 		<div class='settings-title'>Account Information</div>
 		<div class='current-settings-info'>
-			<img class='profile-img-settings' src='<?php echo $user::$profile_img;?>'>
-			<input type="file" name="profileimg">
+			<input type="file" name="profileimg" id="profileimg" class='file-input-profile'>
+			<label for="profileimg">
+				<img class='profile-img-settings' id="preview" src='<?php echo $user::$profile_img;?>'>
+			</label>
 				<div class='settings-input-row'>
 					<div class='settings-input-block'>
 						<div class='settings-label'>Full name</div>
@@ -96,3 +98,18 @@ if (isset($_POST['update-profile'])) {
 
 	</div>
 </form>
+
+<script>
+function readURL(input) {
+if (input.files && input.files[0]) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			$('#preview').attr('src', e.target.result);
+		}
+		reader.readAsDataURL(input.files[0]);
+	}
+}
+$("#profileimg").change(function() {
+readURL(this);
+});
+</script>
